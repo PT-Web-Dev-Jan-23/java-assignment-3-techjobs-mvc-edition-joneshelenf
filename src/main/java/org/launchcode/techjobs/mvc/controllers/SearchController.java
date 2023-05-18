@@ -35,7 +35,7 @@ public class SearchController {
         return "search";
     }
 
-    @PostMapping("/search")
+    @PostMapping("results")
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         List<Job> jobs;
 
