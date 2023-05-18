@@ -38,7 +38,64 @@
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
-</div>
+<!--    <table th:replace="fragments::job-listing"></table>-->
 
+<!--    <div>-->
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>Job Title</th>-->
+<!--                <th>Employer</th>-->
+<!--                <th>Location</th>-->
+<!--                <th>Position Type</th>-->
+<!--                <th>Core Competency</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="job : ${jobs}">-->
+<!--                <td th:text="${job.name}"></td>-->
+<!--                <td th:text="${job.employer.name}"></td>-->
+<!--                <td th:text="${job.location}"></td>-->
+<!--                <td th:text="${job.positionType.name}"></td>-->
+<!--                <td th:text="${job.coreCompetency.name}"></td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--    <form method="post" action="/search">-->
+    <table class="job-listing" th:each="job : ${jobs}">
+        <tr>
+            <td>ID</td>
+            <td th:text="${job.getId()}"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:text="${job.getName()}"></td>
+        </tr>
+        <tr>
+            <td>Employer</td>
+            <td th:text="${job.getEmployer()}"></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td th:text="${job.getLocation()}"></td>
+        </tr>
+        <tr>
+            <td>Position Type</td>
+            <td th:text="${job.getPositionType()}"></td>
+        </tr>
+        <tr>
+            <td>Skill</td>
+            <td th:text="${job.getCoreCompetency()}"></td>
+        </tr>
+    </table>
+<!--    </form>-->
+    </div>
 </body>
 </html>
+
